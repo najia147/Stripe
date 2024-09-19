@@ -7,9 +7,9 @@ const Sidebar = () => {
   const { isSidebarOpen, closeSidebar } = useGlobalContext();
 
   return (
-    <aside
+    <aside 
     className={`${
-      isSidebarOpen ? 'sidebar-wrapper show' : 'sidebar-wrapper'
+      isSidebarOpen ? "sidebar-wrapper show": "sidebar-wrapper"
     }`}
     >
     <div className='sidebar'>
@@ -18,18 +18,18 @@ const Sidebar = () => {
       </button>
       <div className='sidebar-links'>
         {sublinks.map((item, index) => {
-          const {links, page} = item
+          const {links, page} = item;
           return (
             <article key={index}>
-              <h4>{page}</h4>'
+              <h4>{page}</h4>
               <div className='sidebar-sublinks'>
-                {links.map((link, index)=>{
-                  const { url, icon, label } = link
+                {links.map((link, index) => {
+                  const {url, icon, label} = link;
                   return (
-                  <a key={index} href={url}>
-                    {icon}
-                    {label}
-                  </a>
+                    <a key={index} href={url}>
+                      {icon}
+                      {label}
+                    </a>
                   )
                 })}
               </div>
